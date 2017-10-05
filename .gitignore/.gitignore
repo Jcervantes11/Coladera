@@ -1,0 +1,32 @@
+#include <iostream>
+#include <stdlib.h>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+	int v[1000];
+	for(int i=1; i<1000; i++)
+	{
+		v[i]=1;
+	}
+	for(int i=2; i<1000; i++)
+	{
+
+		if(v[i]==1)
+		{
+			for (int a=i+1;a<1000;a++)
+				if (a%i==0)
+					v[a]=0;
+		}
+
+   	}
+    for(int b=1; b<1000; b++)
+    {
+  	 	if(v[b]==1)
+  	 	{
+   			cout<<b<<endl;
+		}
+    }
+    return 0;
+}
